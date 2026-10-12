@@ -257,7 +257,7 @@ class AuthController extends Controller
             return url('/dashboard');
         }
 
-        $appUrl = function_exists('base_url') ? base_url() : (getenv('APP_URL') ?: 'http://localhost/webintoapp/public');
+        $appUrl = getenv('APP_URL') ?: 'http://localhost/website-to-app-converter/public';
         $appHost = parse_url($appUrl, PHP_URL_HOST);
         $appPath = parse_url($appUrl, PHP_URL_PATH) ?: '';
 

@@ -104,7 +104,7 @@
                             required
                         >
                         <button type="submit" id="btnAnalyzeUrl" class="btn-analyze-pill">
-                            <span class="btn-text">Analyze Compatibility</span>
+                            <span class="btn-text btn-analyze-text">Analyze Compatibility</span>
                             <span class="btn-spinner" style="display:none;"></span>
                             <svg class="btn-arrow" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="3" y1="8" x2="13" y2="8"></line>

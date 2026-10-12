@@ -40,14 +40,8 @@ class Request
         $uri = $this->getUri();
         $scriptName = dirname($this->server['SCRIPT_NAME'] ?? '');
         $scriptName = str_replace('\\', '/', $scriptName);
-        if ($scriptName !== '/' && $scriptName !== '.' && str_starts_with($uri, $scriptName)) {
+        if ($scriptName !== '/' && str_starts_with($uri, $scriptName)) {
             $uri = substr($uri, strlen($scriptName));
-        } else {
-            $parentDir = dirname($scriptName);
-            $parentDir = str_replace('\\', '/', $parentDir);
-            if ($parentDir !== '/' && $parentDir !== '.' && str_starts_with($uri, $parentDir)) {
-                $uri = substr($uri, strlen($parentDir));
-            }
         }
         return '/' . trim($uri, '/');
     }

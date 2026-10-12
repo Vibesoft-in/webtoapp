@@ -8,6 +8,7 @@ use App\Core\Controller;
 use App\Models\Theme;
 use App\Models\Addon;
 use App\Models\Pricing;
+
 use Throwable;
 
 class HomeController extends Controller
