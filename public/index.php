@@ -12,7 +12,31 @@ define('CONFIG_PATH', ROOT_PATH . '/config');
 define('STORAGE_PATH', ROOT_PATH . '/storage');
 define('PUBLIC_PATH', __DIR__);
 
-// PSR-4 Autoloader fallback (if composer autoload is not installed)
+// 1. Load Environment variables (.env) if present
+$envFile = ROOT_PATH . '/.env';
+if (!file_exists($envFile) && file_exists(ROOT_PATH . '/.env.example')) {
+    // Fallback to .env.example defaults if .env hasn't been created yet
+    $envFile = ROOT_PATH . '/.env.example';
+}
+if (file_exists($envFile)) {
+    $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        $line = trim($line);
+        if ($line === '' || str_starts_with($line, '#')) {
+            continue;
+        }
+        if (str_contains($line, '=')) {
+            [$key, $val] = explode('=', $line, 2);
+            $key = trim($key);
+            $val = trim($val, " \t\n\r\0\x0B\"'");
+            putenv("$key=$val");
+            $_ENV[$key] = $val;
+            $_SERVER[$key] = $val;
+        }
+    }
+}
+
+// 2. Autoloader
 if (file_exists(ROOT_PATH . '/vendor/autoload.php')) {
     require_once ROOT_PATH . '/vendor/autoload.php';
 } else {
@@ -32,33 +56,14 @@ if (file_exists(ROOT_PATH . '/vendor/autoload.php')) {
             require_once $file;
         }
     });
-
-    // Load helper functions
-    $helpers = ['auth.php', 'url.php', 'security.php', 'validation.php', 'pricing.php'];
-    foreach ($helpers as $helper) {
-        $helperPath = APP_PATH . '/Helpers/' . $helper;
-        if (file_exists($helperPath)) {
-            require_once $helperPath;
-        }
-    }
 }
 
-// Load Environment variables (.env)
-if (file_exists(ROOT_PATH . '/.env')) {
-    $lines = file(ROOT_PATH . '/.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    foreach ($lines as $line) {
-        $line = trim($line);
-        if ($line === '' || str_starts_with($line, '#')) {
-            continue;
-        }
-        if (str_contains($line, '=')) {
-            [$key, $val] = explode('=', $line, 2);
-            $key = trim($key);
-            $val = trim($val, " \t\n\r\0\x0B\"'");
-            putenv("$key=$val");
-            $_ENV[$key] = $val;
-            $_SERVER[$key] = $val;
-        }
+// 3. Always Load Helper Functions
+$helpers = ['auth.php', 'url.php', 'security.php', 'validation.php', 'pricing.php'];
+foreach ($helpers as $helper) {
+    $helperPath = APP_PATH . '/Helpers/' . $helper;
+    if (file_exists($helperPath)) {
+        require_once $helperPath;
     }
 }
 
