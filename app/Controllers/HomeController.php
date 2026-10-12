@@ -8,18 +8,28 @@ use App\Core\Controller;
 use App\Models\Theme;
 use App\Models\Addon;
 use App\Models\Pricing;
+use Throwable;
 
 class HomeController extends Controller
 {
     public function index(): void
     {
-        $themeModel = new Theme();
-        $addonModel = new Addon();
-        $pricingModel = new Pricing();
+        $featuredThemes = [];
+        $addons = [];
+        $plans = [];
 
-        $featuredThemes = $themeModel->getActiveThemes();
-        $addons = $addonModel->getAvailableAddons();
-        $plans = $pricingModel->getActivePlans();
+        try {
+            $themeModel = new Theme();
+            $featuredThemes = $themeModel->getActiveThemes();
+
+            $addonModel = new Addon();
+            $addons = $addonModel->getAvailableAddons();
+
+            $pricingModel = new Pricing();
+            $plans = $pricingModel->getActivePlans();
+        } catch (Throwable $e) {
+            // Gracefully continue so home page loads beautifully even if database is connecting/unconfigured
+        }
 
         $this->render('home.index', [
             'title' => 'Turn Your Website into iOS & Android Mobile Apps',
