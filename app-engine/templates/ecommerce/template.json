@@ -1,0 +1,7 @@
+{
+    "slug": "ecommerce",
+    "name": "E-Commerce App Template",
+    "supported_platforms": ["wordpress", "woocommerce", "shopify"],
+    "version": "1.0.0",
+    "description": "Standard retail & e-commerce shopping mobile layout with cart, checkout, and product gallery."
+}

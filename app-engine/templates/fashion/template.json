@@ -1,0 +1,7 @@
+{
+    "slug": "fashion",
+    "name": "Fashion & Lifestyle App Template",
+    "supported_platforms": ["wordpress", "woocommerce", "shopify"],
+    "version": "1.0.0",
+    "description": "High-aesthetic lookbook, lifestyle catalog, and responsive fashion mobile shopping experience."
+}

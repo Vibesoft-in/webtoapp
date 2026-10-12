@@ -1,0 +1,8 @@
+{
+    "id": "theme-01",
+    "name": "Modern Minimalist",
+    "primary_color": "#18181b",
+    "accent_color": "#6366f1",
+    "font_family": "Inter",
+    "dark_mode_supported": true
+}

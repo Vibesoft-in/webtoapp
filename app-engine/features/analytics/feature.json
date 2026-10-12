@@ -1,0 +1,6 @@
+{
+    "key": "analytics",
+    "name": "Firebase & In-App Telemetry Analytics",
+    "version": "1.0.0",
+    "permissions": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE"]
+}

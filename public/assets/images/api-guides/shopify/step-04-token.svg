@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="100%" height="100%" style="border-radius:12px;background:#FAF8F5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#2C2621" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Window Frame -->
+  <rect x="0" y="0" width="680" height="400" rx="12" fill="#FAF8F5" stroke="#E6DFD5" stroke-width="1.5"/>
+
+  <!-- Browser Header -->
+  <path d="M0 12 Q0 0 12 0 L668 0 Q680 0 680 12 L680 44 L0 44 Z" fill="#F0EBE1"/>
+  <circle cx="24" cy="22" r="5" fill="#D8CFBE"/>
+  <circle cx="40" cy="22" r="5" fill="#D8CFBE"/>
+  <circle cx="56" cy="22" r="5" fill="#D8CFBE"/>
+
+  <!-- Address Bar -->
+  <rect x="80" y="10" width="460" height="24" rx="6" fill="#FFFFFF" stroke="#DDD5C7" stroke-width="1"/>
+  <text x="96" y="26" font-size="11" fill="#786C5E" font-weight="500">admin.shopify.com/store/your-store/apps/credentials</text>
+
+  <!-- Window Content Background -->
+  <rect x="0" y="44" width="680" height="356" fill="#FDFBF9"/>
+
+  <!-- Main Content Layout -->
+    <rect x="140" y="65" width="510" height="315" rx="8" fill="#FFFFFF" stroke="#E2DACF" filter="url(#shadow)"/>
+  <text x="165" y="98" font-size="15" fill="#252525" font-weight="bold">API credentials</text>
+  
+  <rect x="165" y="115" width="460" height="100" rx="6" fill="#F4F8F1" stroke="#BDDDB3" stroke-width="1.5"/>
+  <text x="185" y="140" font-size="12" fill="#1C4510" font-weight="bold">Admin API access token</text>
+  <text x="185" y="158" font-size="10" fill="#4E522C">This token has access to the scopes you selected. It is displayed only once.</text>
+  
+  <rect x="185" y="170" width="320" height="30" rx="4" fill="#FFFFFF" stroke="#A7CE9B"/>
+  <text x="195" y="189" font-size="11" fill="#1C4510" font-weight="bold">shpat_8a92b01c3d4e5f6789012345</text>
+  <rect x="515" y="170" width="90" height="30" rx="4" fill="#4E522C"/>
+  <text x="560" y="189" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Copy token</text>
+
+  <rect x="165" y="230" width="460" height="120" rx="6" fill="#FAF6F0" stroke="#DDD2C0"/>
+  <text x="185" y="258" font-size="11" fill="#77716D">API key and secret key (Storefront API / Webhooks)</text>
+
+  <!-- Highlight Overlay / Focus Ring -->
+    <rect x="175" y="125" width="440" height="85" rx="8" fill="none" stroke="#B69A78" stroke-width="2.5"/>
+  <rect x="420" y="95" width="200" height="24" rx="12" fill="#403A32"/>
+  <text x="520" y="111" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Copy shpat_ Token Immediately</text>
+</svg>

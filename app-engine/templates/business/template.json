@@ -1,0 +1,7 @@
+{
+    "slug": "business",
+    "name": "Corporate & Professional Business Template",
+    "supported_platforms": ["wordpress", "shopify"],
+    "version": "1.0.0",
+    "description": "Corporate showcase, service booking, lead capture, and portfolio mobile interface."
+}

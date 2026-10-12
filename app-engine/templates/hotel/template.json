@@ -1,0 +1,7 @@
+{
+    "slug": "hotel",
+    "name": "Hotel & Hospitality Template",
+    "supported_platforms": ["wordpress", "woocommerce"],
+    "version": "1.0.0",
+    "description": "Room booking, amenity browsing, and concierge guest mobile services."
+}

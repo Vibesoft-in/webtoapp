@@ -1,0 +1,7 @@
+{
+    "slug": "healthcare",
+    "name": "Healthcare & Wellness Template",
+    "supported_platforms": ["wordpress", "woocommerce"],
+    "version": "1.0.0",
+    "description": "Appointment booking, clinic service catalog, and doctor consultation portal template."
+}

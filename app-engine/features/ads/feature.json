@@ -1,0 +1,6 @@
+{
+    "key": "ads",
+    "name": "Google AdMob Native & Interstitial Ads",
+    "version": "1.0.0",
+    "permissions": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE"]
+}

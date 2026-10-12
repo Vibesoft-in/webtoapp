@@ -1,0 +1,7 @@
+{
+    "slug": "restaurant",
+    "name": "Restaurant & Food Delivery Template",
+    "supported_platforms": ["wordpress", "woocommerce"],
+    "version": "1.0.0",
+    "description": "Digital food ordering menu, table reservation, and live order tracking template."
+}

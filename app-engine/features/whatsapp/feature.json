@@ -1,0 +1,6 @@
+{
+    "key": "whatsapp",
+    "name": "Floating WhatsApp Live Support",
+    "version": "1.0.0",
+    "permissions": ["android.permission.INTERNET"]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "converter/website-to-app-converter",
+    "description": "Professional Website-to-App Converter Platform in PHP MVC",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.0",
+        "ext-pdo": "*",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/Helpers/auth.php",
+            "app/Helpers/url.php",
+            "app/Helpers/security.php",
+            "app/Helpers/validation.php",
+            "app/Helpers/pricing.php"
+        ]
+    }
+}

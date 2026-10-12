@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Protect sensitive files and directories
+    RewriteRule ^(\.env|\.git|app|config|database|storage/logs) - [F,L]
+
+    # Route all requests to public/
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L,QSA]
+</IfModule>

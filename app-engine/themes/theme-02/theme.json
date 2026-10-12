@@ -1,0 +1,8 @@
+{
+    "id": "theme-02",
+    "name": "Vibrant Commerce",
+    "primary_color": "#ec4899",
+    "accent_color": "#8b5cf6",
+    "font_family": "Poppins",
+    "dark_mode_supported": false
+}

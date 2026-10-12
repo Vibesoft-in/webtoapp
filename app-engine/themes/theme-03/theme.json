@@ -1,0 +1,8 @@
+{
+    "id": "theme-03",
+    "name": "Dark Luxury",
+    "primary_color": "#0f172a",
+    "accent_color": "#38bdf8",
+    "font_family": "Plus Jakarta Sans",
+    "dark_mode_supported": true
+}

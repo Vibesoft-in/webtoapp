@@ -1,0 +1,7 @@
+{
+    "key": "push-notifications",
+    "name": "OneSignal & FCM Push Notifications",
+    "provider": "onesignal",
+    "version": "1.0.0",
+    "permissions": ["android.permission.POST_NOTIFICATIONS"]
+}
